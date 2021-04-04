@@ -11,6 +11,6 @@
 		],
 		"jsx": "react",
 		"esModuleInterop": true,
-		"noImplicitAny": true,
+		"noImplicitAny": true
 	}
 }
