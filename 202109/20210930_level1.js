@@ -1,6 +1,17 @@
+const param = { price: 3, money: 20, count: 4 };
+
+console.log(CalculateLeastCharge(param));
+function CalculateLeastCharge({ price, money, count }) {
+	let res = 0;
+	for (let i = 1; i <= count; i++) {
+		res += price * i;
+	}
+
+	return money > res ? 0 : res - money;
+}
+
 /**
  * 
- 
 let a = [4, 7, 12];
 let b = [true, false, true];
 
