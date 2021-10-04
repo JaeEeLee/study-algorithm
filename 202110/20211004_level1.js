@@ -108,3 +108,10 @@ function solution(n, m) {
 
 	return [gcdIs, lcmIs];
 }
+
+// #9
+//짝수 홀수 구하기
+// 오징어게임: 내가~ 뭐라~~ 그랬더라~~?
+function solution(num) {
+	return num % 2 ? 'Odd' : 'Even';
+}
