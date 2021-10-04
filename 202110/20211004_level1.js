@@ -115,3 +115,14 @@ function solution(n, m) {
 function solution(num) {
 	return num % 2 ? 'Odd' : 'Even';
 }
+
+// #10
+// 제일 작은 수 구하기
+function solution(arr) {
+	if (arr.length < 2) return [-1];
+
+	let min = Math.min.apply(null, arr);
+	arr.splice(arr.indexOf(min), 1);
+
+	return arr;
+}
