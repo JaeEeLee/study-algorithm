@@ -69,3 +69,42 @@ function solution(arr1, arr2) {
 
 	return answer;
 }
+
+// #7
+// 콜라츠 추측
+function solution(num) {
+	let check = num;
+	let count = 0;
+
+	while (check != 1) {
+		count++;
+		check = check % 2 === 0 ? check / 2 : check * 3 + 1;
+
+		if (count === 500) {
+			return -1;
+		}
+	}
+
+	return count;
+}
+
+// #8
+// 최대공약수와 최소공배수
+/**
+ * 최대공약수는 유클리드 호제법을 이용해서 최대공약수를 구하고 최소공배수는 두 수의 곱을 최대공약수로 나누어서 구한다.
+ *
+ * 유클리드 호제법
+ * a,b 를 서로를 나눈다. 만약 나누어진다면 b가 최대공약수이다.(a > b이다.)
+ * 만약 서로가 나누어지지 않는다면 b와 a % b(a를 b로 나눈 나머지) 다시 나눈다.
+ * 서로가 나누어진다면 a % b가 최대공약수이다. 만약 나누어지지 않는다면 다시 위 방법을 반복한다.
+ *
+ */
+function solution(n, m) {
+	const gcd = (x, y) => (x % y === 0 ? y : gcd(y, x % y));
+	const lcm = (x, y, num) => (x * y) / num;
+
+	let gcdIs = gcd(n, m);
+	let lcmIs = lcm(n, m, gcdIs);
+
+	return [gcdIs, lcmIs];
+}
