@@ -1,11 +1,10 @@
 // #1
 // 시저 암호 구하기
 // 20211008 진행중
-const res = solution('a B z', 4);
+// const res = solution('a B z', 4);
 // const res = solution('AB', 1)
-console.log(res);
 
-function solution(s, n) {
+function secretLetter(s, n) {
 	const abc = alphabet();
 	let obj = [];
 
@@ -20,7 +19,6 @@ function solution(s, n) {
 
 		let str = abc.substr(num, 1);
 
-		if (!str) str = 'a';
 		if (chk) str = str.toUpperCase();
 
 		obj.push(str);
@@ -40,4 +38,13 @@ function alphabet() {
 
 function isUpperCase(str) {
 	return str === str.toUpperCase();
+}
+
+// #2
+// 문자열을 정수로 바꾸기
+// let a = '1234'
+console.log(solution('-1234'));
+function solution(s) {
+	// return s / 1; // 사칙연산을 활용할수도 있다..!
+	return Number(s);
 }
