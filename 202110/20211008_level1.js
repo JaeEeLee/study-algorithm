@@ -43,8 +43,23 @@ function isUpperCase(str) {
 // #2
 // 문자열을 정수로 바꾸기
 // let a = '1234'
-console.log(solution('-1234'));
-function solution(s) {
+// console.log(translateNumber('-1234'));
+function translateNumber(s) {
 	// return s / 1; // 사칙연산을 활용할수도 있다..!
 	return Number(s);
+}
+
+//#3
+//수박수박수박
+console.log(subaksubak(4));
+function subaksubak(n) {
+	let i = 1,
+		str = '수';
+
+	while (i < n) {
+		str += i % 2 ? '박' : '수';
+		i++;
+	}
+
+	return str;
 }
