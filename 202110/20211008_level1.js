@@ -51,7 +51,7 @@ function translateNumber(s) {
 
 //#3
 //수박수박수박
-console.log(subaksubak(4));
+console.log(subaksubak(1));
 function subaksubak(n) {
 	let i = 1,
 		str = '수';
