@@ -50,3 +50,26 @@ function solution(n) {
 function solution(seoul) {
 	return `김서방은 ${seoul.indexOf('Kim')}에 있다`;
 }
+
+// #3
+// 문자열 다루기 기본
+function solution(s) {
+	return (
+		(s.length === 4 || s.length === 6) && !s.split('').some((v) => isNaN(v))
+	);
+}
+
+// #4
+// 문자열 내 p와 y의 개수
+function solution(s) {
+	s = s.toLowerCase();
+	let p = 0,
+		y = 0;
+
+	for (let i = 0; i < s.length; i++) {
+		s[i] === 'p' && p++;
+		s[i] === 'y' && y++;
+	}
+
+	return p === y;
+}
