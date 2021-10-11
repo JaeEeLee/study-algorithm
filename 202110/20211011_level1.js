@@ -58,7 +58,6 @@ function solution(s) {
 		(s.length === 4 || s.length === 6) && !s.split('').some((v) => isNaN(v))
 	);
 }
-
 // #4
 // 문자열 내 p와 y의 개수
 function solution(s) {
