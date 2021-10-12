@@ -19,6 +19,7 @@ function solution(a, b) {
 
 //#2
 // 가운데 글자 가져오기
+//substring 써도 되는데!!바보!
 function solution(s) {
 	let l = s.length;
 	return l % 2 ? s[(l - 1) / 2] : s[l / 2 - 1] + s[l / 2];
