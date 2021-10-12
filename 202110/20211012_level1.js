@@ -16,3 +16,10 @@ function solution(a, b) {
 
 	return x - div + mult;
 }
+
+//#2
+// 가운데 글자 가져오기
+function solution(s) {
+	let l = s.length;
+	return l % 2 ? s[(l - 1) / 2] : s[l / 2 - 1] + s[l / 2];
+}
