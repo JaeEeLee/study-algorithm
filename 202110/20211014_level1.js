@@ -8,3 +8,11 @@ function solution(n) {
     }
     return i
 }
+
+
+// #2
+// 나누어 떨어지는 수
+function solution(arr, divisor) {
+    let res = arr.filter((v) => v % divisor === 0)
+    return res.length ? res.sort((a, b) => a - b) : [-1]
+}
